@@ -1,0 +1,213 @@
+body {
+      font-family: 'Ubuntu', sans-serif;
+      margin: 0;
+      background: #fff;
+    }
+
+.tentang-hero {
+  position: relative;
+  height: 60vh;
+  background: url("../images/images/studytour.png") center center / cover no-repeat;
+  display: flex;
+  align-items: flex-end; /* pindahkan ke bawah */
+  justify-content: flex-start; /* tetap di kiri */
+  overflow: hidden;
+}
+
+.tentang-hero .container {
+  position: relative;
+  align-self: flex-end; /* dorong ke bawah */
+  text-align: left;     /* pastikan teks kiri */
+  margin-left: 80px;    /* jarak dari kiri */
+  margin-bottom: 40px;  /* jarak dari bawah */
+}
+
+
+.tentang-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(70, 7, 78, 0.85) 0%,
+    rgba(25, 128, 218, 0.6) 50%,
+    rgba(25, 128, 218, 0.2) 100%
+  );
+}
+
+.tentang-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0; /* hapus margin atas agar tidak naik */
+}
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #eee;
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    #layanan-kami-header {
+  position: relative;
+  width: 100%;
+  height: 300px; /* tinggi header section */
+  background: url("/storage/images/0323bb4e-65ec-44e7-9755-1ae92ebb9b5d.jpg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Overlay gradasi ungu transparan di atas gambar */
+#layanan-kami-header .header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(64, 0, 128, 0.5),
+    rgba(0, 0, 0, 0.2)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+
+#layanan-kami-header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #fff;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  #layanan-kami-header {
+    height: 200px;
+  }
+  #layanan-kami-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+    /* ===== HUBUNGI KAMI ===== */
+    .hubungi-section {
+      text-align: center;
+      padding: 60px 20px 80px;
+    }
+
+    .hubungi-section h2 {
+      font-size: 26px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .hubungi-section h3 {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .hubungi-section p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-gradient-oval {
+      background: linear-gradient(90deg, #5b1b6d, #4a90e2);
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 14px 50px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-gradient-oval:hover {opacity: 0.85;}
+
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 28px; }
+      .layanan-card { width: 100%; }
+    }
+  /* ===== PROFIL SECTION ===== */
+.tentang-profil {
+  background: #fff;
+}
+
+.tentang-profil h2 {
+  font-size: 1.8rem;
+  padding: 10px 0px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.tentang-profil img {
+  transition: transform 0.4s ease;
+}
+
+.tentang-profil img:hover {
+  transform: scale(1.03);
+}
+
+.tentang-profil h3 {
+  font-size: 1.4rem;
+}
+
+.tentang-profil p {
+  line-height: 1.7;
+}
+
+/* Section utama */
+.layanan-section {
+  display: flex;
+  justify-content: center;   /* posisikan horizontal di tengah */
+  align-items: center;       /* posisikan vertikal di tengah */
+  padding: 20px 0;           /* jarak atas dan bawah */
+  background: #fff;          /* latar putih (bisa diganti sesuai tema) */
+}
+
+/* Tombol berbentuk oval */
+.btn-outline-oval {
+  background: transparent;
+  border: 2px solid #4a90e2;
+  color: #4a90e2;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;       /* bikin oval */
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-oval:hover {
+  background: linear-gradient(90deg, #5e1b82, #1e90ff);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .btn-outline-oval {
+    font-size: 14px;
+    padding: 8px 25px;
+  }
+}

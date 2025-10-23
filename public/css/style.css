@@ -1,0 +1,384 @@
+body {
+    font-family: "Ubuntu", sans-serif !important;
+    background-color: #ffffff;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.hero-section {
+    position: relative;
+    background-image: url("../images/images/picgedung.png");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh + 40px);
+    display: flex;
+    align-items: flex-end;
+    padding-left: 80px;
+    justify-content: flex-start;
+    color: white;
+    margin-top: -40px;
+    z-index: 1;
+}
+
+.hero-content {
+    background: linear-gradient(to right, #46074e, rgb(25, 123, 208, 0.8));
+    box-shadow: 10px 10px 4px 0px oklch(0% 0 0 / 0.2);
+    position: absolute;
+    bottom: 14%;
+    left: 5%;
+    width: 621px;
+    height: 120px;
+    max-width: 90%;
+    align-items: center;
+    padding: 30px 40px;
+    margin: 20px;
+    text-align: start;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.hero-content::before {
+    content: "";
+    position: absolute;
+    left: 27px;
+    top: 0;
+    width: 1px;
+    height: 70%;
+    background-color: hsla(0, 0%, 100%, 0.4);
+    border-radius: 2px;
+}
+
+.hero-content h2 {
+    font-size: 20px;
+    padding-left: 10px;
+    font-weight: 500;
+    color: white;
+    margin: 0 0;
+}
+
+.hero-content p {
+    color: #fff;
+    margin: 0;
+}
+
+.btn-hero {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #174bcf;
+}
+
+/* ---------- TENTANG ---------- */
+/* SECTION TENTANG KAMI */
+.section.about {
+  padding: 100px 20px;
+  background-color: #f9f9f9; /* warna lembut agar beda dengan section sebelumnya */
+  text-align: center;
+  color: #333;
+}
+
+/* Judul "TENTANG KAMI" */
+.section.about .section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Paragraf utama */
+.section.about .lead {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+/* ---------- LAYANAN ---------- */
+.layanan {
+  background: #fbfbfd;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(20,30,60,0.06);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.5s;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; /* gradasi hanya setengah bagian kiri gambar */
+ background: linear-gradient(
+    90deg,
+    rgba(70, 7, 78, 0.85) 0%,     /* ungu pekat di kiri */
+    rgba(25, 128, 218, 0.4) 20%,  /* biru lembut di tengah */
+    rgba(25, 128, 218, 0) 100%    /* transparan di kanan */
+  );
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  padding: 22px;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+
+.card-line {
+  width: 3px;
+  height: 48px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 2px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ---------- MITRA ---------- */
+/* SECTION MITRA KAMI */
+.section.mitra {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+/* Judul "MITRA KAMI" */
+.section.mitra .section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* Container untuk semua logo mitra */
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Kartu setiap logo */
+.partner-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  width: 180px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover biar interaktif */
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Gambar logo */
+.partner-card img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+.partner-card img:hover {
+  opacity: 1;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .partner-card {
+    width: 150px;
+    height: 70px;
+    padding: 14px;
+  }
+
+  .section.mitra .section-title {
+    font-size: 22px;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 480px) {
+  .partner-card {
+    width: 130px;
+    height: 65px;
+  }
+
+  .section.mitra .section-title {
+    font-size: 20px;
+  }
+
+  .partners {
+    gap: 16px;
+  }
+}
+
+/* ---------- CTA BANNER ---------- */
+/* === SECTION CTA === */
+.section.cta {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-inner {
+  background: linear-gradient(90deg, #5e1b82 0%, #3b57b8 50%, #1e90ff 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* supaya tetap rapi di layar kecil */
+}
+
+/* Teks di kiri */
+.cta-text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.cta-text p {
+  font-size: 15px;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+/* Tombol di kanan */
+.cta-btn {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #fff;
+  color: #1e90ff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .cta-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding: 25px 30px;
+  }
+
+  .cta-text h3 {
+    font-size: 16px;
+  }
+
+  .cta-text p {
+    font-size: 14px;
+  }
+}
+
+/* ---------- ARTIKEL ---------- */
+.artikel{background:#fff;text-align:center}
+.article-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;max-width:1100px;margin:30px auto;padding:0 20px}
+.article-card{background:#fff;border-radius:10px;box-shadow:0 8px 24px rgba(20,30,60,0.05);overflow:hidden;padding-bottom:18px}
+.article-card img{width:100%;height:160px;object-fit:cover}
+.article-card h4{margin:18px;font-weight:500;color:#444;font-size:18px}
+
+/* ---------- HUBUNGI ---------- */
+.hubungi{background:#f9fbff;text-align:center}
+.contact-form{max-width:560px;margin:20px auto;display:flex;flex-direction:column;gap:12px}
+.contact-form input,.contact-form textarea{padding:12px;border-radius:8px;border:1px solid #e3e7ef;background:#fff;outline:none}
+.contact-form button{align-self:flex-start;background:linear-gradient(90deg,var(--purple-2),#4aa0e6);color:#fff;padding:10px 18px;border-radius:8px;border:0;cursor:pointer}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 980px){
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .article-grid{grid-template-columns:1fr}
+    .hero-card{min-width:360px}
+    .hero-overlay{left:20px;right:20px}
+}
+@media (max-width: 640px){
+    .nav-menu{display:none}
+    .search input{width:120px}
+    .cards{grid-template-columns:1fr}
+    .hero{height:520px}
+    .hero-card{width:calc(100% - 60px); padding:20px}
+    .cta-inner{flex-direction:column;gap:12px;text-align:center}
+}
